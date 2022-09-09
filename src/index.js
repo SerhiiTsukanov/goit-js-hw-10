@@ -31,8 +31,9 @@ const searchQuery = searchForm.value.toLowerCase().trim();
 }
 
 function clearMarkup() {
-    countryInfoContainer.innerHTML = '';
-    countryListContainer.innerHTML = '';
+  countryInfoContainer.innerHTML = '';
+  countryListContainer.innerHTML = '';
+  console.log(countryInfoContainer);
 }
 
 function massageError() {
@@ -42,7 +43,7 @@ clearMarkup();
   });
 }
 
-function renderCountryCard() {
+function renderCountryCard(countries) {
     clearMarkup();
     if (countries.length > LIMIT_COUNTRY) {
     Notiflix.Notify.info(

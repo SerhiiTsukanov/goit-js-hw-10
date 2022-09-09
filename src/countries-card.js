@@ -25,8 +25,7 @@ export function createMarkupInfo({
     <p>${Object.values(languages)}</p>
   </li>
 </ul>
-</div>
-`;
+</div>`
 }
 
 export function createMarkupList({
@@ -38,5 +37,5 @@ export function createMarkupList({
   <img src="${flags.svg}" alt="flag" width="30" height="20">
   <p>${name.common}</p>
 </li>
-`;
+`
 }
