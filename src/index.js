@@ -52,15 +52,12 @@ function renderCountryCard(countries) {
     );
     return;
   } else if (countries.length === 1) {
-    refs.countryInfoContainer.innerHTML = createMarkupInfo(countries[0]);
+    countryInfoContainer.innerHTML = createMarkupInfo(countries[0]);
   } else {
     let countryListContainer = '';
     countries.map(country => {
       countryListContainer += createMarkupList(country);
     });
-    countryListContainer.insertAdjacentHTML(
-      'beforeend',
-      countryListContainer
-    );
+    countryListContainer.insertAdjacentHTML('beforeend', countryListContainer);
   }
 }
