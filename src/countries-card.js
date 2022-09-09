@@ -36,6 +36,5 @@ export function createMarkupList({
 <li>
   <img src="${flags.svg}" alt="flag" width="30" height="20">
   <p>${name.common}</p>
-</li>
-`
+</li>`
 }

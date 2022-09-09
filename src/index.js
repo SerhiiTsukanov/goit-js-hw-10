@@ -27,7 +27,7 @@ const searchQuery = searchForm.value.toLowerCase().trim();
     API.fetchCountries(searchQuery)
     .then(renderCountryCard)
     .catch(massageError)
-    // .finally(() => form.reset());
+    .finally(() => form.reset());
 }
 
 function clearMarkup() {
