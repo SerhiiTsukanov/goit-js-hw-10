@@ -1,40 +1,39 @@
 
 
 export function createMarkupInfo({
-    name,
+    name, 
     capital,
     population,
     languages,
     flags,
 }) {
     return `
-<div>
-<h2>${name.common}</h2>
-<img src="${flags.svg}" width="200px" height="120px">
-<ul>
-  <li>
-    <h3>Capital:</h3>
+<div class="country-info__card">
+<h2 class="country-info__name">${name.common}</h2>
+<img src="${flags.svg}" class="country-info__flag" width="220px" height="140px">
+<ul class="country-info-features">
+  <li class="country-info__feature">
+    <h3>Capital:&nbsp;</h3>
     <p>${capital}</p>
   </li>
-  <li>
-    <h3>Population:</h3>
+  <li class="country-info__feature">
+    <h3>Population:&nbsp;</h3>
     <p>${population}</p>
   </li>
-  <li>
-    <h3>Languages:</h3>
+  <li class="country-info__feature">
+    <h3>Languages:&nbsp;</h3>
     <p>${Object.values(languages)}</p>
   </li>
 </ul>
-</div>`
+</div>
+`;
 }
 
-export function createMarkupList({
-    name,
-    flags,
-}) {
-    return `
-<li>
-  <img src="${flags.svg}" alt="flag" width="30" height="20">
-  <p>${name.common}</p>
-</li>`
+export function createMarkupList({name, flags,}) {
+return `
+<li class="country__item">
+  <img src="${flags.svg}" alt="flag" width="20" height="20">
+  <p><b>${name.common}</b></p>
+</li>
+`;
 }
