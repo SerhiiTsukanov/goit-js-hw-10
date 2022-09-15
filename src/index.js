@@ -27,7 +27,7 @@ function onSearch(e) {
     API.fetchCountries(searchQuery)
     .then(renderCountryCard)
     .catch(massageError)
-    .finally(() => form.reset());
+    // .finally(() => form.reset());
 }
 
 function massageError() {
